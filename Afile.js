@@ -8,7 +8,7 @@ const ytdl = require('ytdl-core');
 // npm install ffmpeg
 // npm install discord.js
 // you will have to take your discord token from the developer menu, then from the bot you created copy and paste it into the ' ' it should look like 'token' but in reality its a long stream of numbers and letters
-const Token = 'your token'
+
 
 client.on('message', async message => { // this script right here will detect if the message is caps or no caps
     if (message.content.toLowerCase() === 'rick') { // say rick or RICK or Rick it doesnt matter
@@ -23,4 +23,4 @@ client.on('message', async message => { // this script right here will detect if
 }); // seals the statements
 }; // seals statements
 }); // seals the final statement
- client.login(Token);
+ client.login('bot-token-here');
