@@ -82,4 +82,4 @@ client.on('message', async message => { // this script right here will detect if
         }
 });
 
- client.login('NzUwMTM3NDMzOTQwODIwMDM4.X02J7Q.F2JHjl5typto5_74Bmj99zRwUvc');
+ client.login('token');
