@@ -1,8 +1,7 @@
 import discord
-from discord.ext import commands
 import ffmpeg
-client = discord.Client()
 
+client = discord.Client()
 @client.event
 async def on_message(message):
     x = message.content.split(" ")
@@ -31,7 +30,9 @@ async def on_message(message):
                 vc = await voice_channel.connect()
                 vc.play(discord.FFmpegPCMAudio(executable="C:/ffmpeg/bin/ffmpeg.exe", source="C:/Users/drbla/Desktop/Rick.mp3"))
         if message.content.lower() == 'disconnect':
-            vc.disconnect() # its fake
+            await message.reply("no")
+        if message.content.lower() == '.leave':
+            await message.guild.voice_client.disconnect()
     except:
         await message.channel.send("Somethings not right I can sense it")
 client.run('get your own token')
