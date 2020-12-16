@@ -11,6 +11,10 @@ async def on_message(message):
         x4 = x3[1]
         x5 = x4.split(">")
         x6 = x5[0]
+        try:
+            x6 = x6.split("!")[0]
+        except:
+            potato = "meme"
         user = await message.guild.fetch_member(x6)
         while True:
             voice_channel = user.voice.channel
@@ -30,7 +34,7 @@ async def on_message(message):
                 vc = await voice_channel.connect()
                 vc.play(discord.FFmpegPCMAudio(executable="C:/ffmpeg/bin/ffmpeg.exe", source="Rick.mp3"))
         if message.content.lower() == 'disconnect':
-            await message.reply("no")
+            await message.channel.send("no")
         if message.content.lower() == '.leave':
             await message.guild.voice_client.disconnect()
     except:
