@@ -18,7 +18,7 @@ async def on_message(message):
             if voice_channel != None:
                 channel = voice_channel.name
                 vc = await voice_channel.connect()
-                vc.play(discord.FFmpegPCMAudio(executable="C:/ffmpeg/bin/ffmpeg.exe", source="C:/Users/drbla/Desktop/Rick.mp3"))
+                vc.play(discord.FFmpegPCMAudio(executable="C:/ffmpeg/bin/ffmpeg.exe", source="Rick.mp3"))
                 break
     try:
         if message.content.lower() == 'rick':
@@ -28,7 +28,7 @@ async def on_message(message):
                 await message.channel.send("Never Gonna Give You Up")
                 channel = voice_channel.name
                 vc = await voice_channel.connect()
-                vc.play(discord.FFmpegPCMAudio(executable="C:/ffmpeg/bin/ffmpeg.exe", source="C:/Users/drbla/Desktop/Rick.mp3"))
+                vc.play(discord.FFmpegPCMAudio(executable="C:/ffmpeg/bin/ffmpeg.exe", source="Rick.mp3"))
         if message.content.lower() == 'disconnect':
             await message.reply("no")
         if message.content.lower() == '.leave':
